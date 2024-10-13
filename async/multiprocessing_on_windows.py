@@ -6,8 +6,6 @@ Understanding Multiprocessing Behavior on Windows
 Context:
 When using the multiprocessing module on Windows, it's crucial to be aware of how child processes are spawned and how the main process behaves during their execution.
 
-Behavior Description:
-
 Concurrent Execution:
 
 When a new process is spawned using Process(target=worker), the child process starts executing the script from the top independently of the main process.

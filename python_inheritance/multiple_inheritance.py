@@ -26,6 +26,7 @@ print(D.mro())
 #super 
 
 #super() is critical for ensuring that all classes in the MRO participate in the method chain.
+#super takes to next thing after current class in the MRO i.e next in line
 
 #It’s not just about accessing the immediate parent; it’s about handling complex inheritance scenarios predictably.
 
