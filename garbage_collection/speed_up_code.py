@@ -3,6 +3,7 @@ import time
 
 gc.set_debug(False)
 gc.set_threshold(300000,500,500)
+#default (700,10,10)
 #if we increase the threshold the code will speedup bcz gc will run less often and this will lead to more CPU memory,
 #CPU memory will be increased but the speed of code also increases
 
