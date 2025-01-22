@@ -32,3 +32,46 @@ workers = num of parallel processing
 
 # Neo4J alternatives 
 1. Azure cosmos DB Apache Gremlin
+
+# Chroma DB 
+1. Adding documents 
+    ```
+    collection = client.create_collection(name="example_collection")
+    
+    collection.add(
+    documents=["This is a sample document."],
+    metadatas=[{"author": "John"}],
+    ids=["doc1"]
+    )
+    ```
+
+2. How do you perform a similarity search in   ChromaDB?
+
+  ```
+    results = collection.query(
+    query_texts=["AI technologies"],
+    n_results=2
+    )
+    print(results["documents"])
+
+  ```  
+
+
+3. How do you handle duplicate documents or embeddings in ChromaDB?
+
+```
+collection.add(
+    documents=["Duplicate document"],
+    metadatas=[{"type": "duplicate"}],
+    ids=["doc1"]
+)
+
+# Attempt to add a duplicate ID will raise an error
+# Use update if needed:
+collection.update(
+    ids=["doc1"],
+    documents=["Updated document"]
+)
+
+```
+
