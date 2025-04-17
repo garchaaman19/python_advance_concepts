@@ -9,12 +9,13 @@ data = loader.load()
 
 
 # Incorrect results 
-1. Added meta data, ids. 
-
+1. Added meta data, ids in vector db, irrelevant results.
+2. instruction tuning
 
 # Hallucination. 
 
-1. 
+1. RAG 
+2. evaluate 
 
 
 # Guard rails
@@ -22,6 +23,9 @@ data = loader.load()
 
     from openai import Moderation 
     moderation = Moderation.create(input=response)
+
+- Nemo guardrails 
+    
 
 # Chroma DB 
 - delete collections
